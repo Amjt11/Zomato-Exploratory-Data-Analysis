@@ -64,8 +64,8 @@ WITH RankTable AS (
 )
 SELECT *
 FROM RankTable
-WHERE rank = 1
-ORDER BY total_revenue DESC;
+WHERE rank <= 3
+ORDER BY city DESC;
 
 
 /* 5. Most Popular Dish by City
@@ -139,7 +139,7 @@ cancel_ratio_2023 AS (
 SELECT 
     c23.restaurant_id,
     c23.restaurant_name,
-    CAST(c23.cancellation AS DECIMAL(10,2)) AS cancel_23,
+    CAST(c23.cancellation AS DECIMAL(10,2)) AS cancel_rate,
     CAST(COALESCE(c24.cancellation, 0) AS DECIMAL(10,2)) AS cancel_24
 FROM cancel_ratio_2023 AS c23
 FULL JOIN cancel_ratio_2024 AS c24
@@ -182,7 +182,7 @@ ORDER BY rest_id, mm_yy;
 
 /* 9. Customer Segmentation
        Segment customers into 'Gold' or 'Silver' groups based on their total spending
-       compare to the average order value (AOV) . If customer's total spendings exceeds AOV
+       compare to the average order value (AOV) . If customer's average spendings exceeds AOV
 	   label them as Gold; otherwise Silver . Find total orders and revenue in each segment*/
 
 SELECT
@@ -196,7 +196,7 @@ FROM
 	COUNT(order_id) AS total_orders,
 	ROUND((SELECT SUM(total_amount)/COUNT(order_id) FROM orders), 2) AS customer_aov,
 	CASE
-		WHEN SUM(total_amount) > (SELECT AVG(total_amount) FROM orders) THEN 'GOLD'
+		WHEN AVG(total_amount) > (SELECT AVG(total_amount) FROM orders) THEN 'GOLD'
 		ELSE 'SILVER'
 	END as customer_category
 	FROM orders
@@ -333,7 +333,7 @@ GROUP BY order_item,season
 ORDER BY order_item,total_orders DESC;
 
 
-/* 20. The rank of each city based on the total revenue for last year 2023 */
+/* 15. The rank of each city based on the total revenue for last year 2023 */
 
 SELECT
 r.city,
