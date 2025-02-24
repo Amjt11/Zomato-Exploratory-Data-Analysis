@@ -85,58 +85,66 @@ WHERE order_item IS NULL
 
 ### 1. Popular Time Slots during which the most orders are placed (based on 2-hour intervals)
 
-```sql
-SELECT Top 5
-    FLOOR(DATEPART(HOUR, order_time) / 2) * 2 AS start_time,
-    FLOOR(DATEPART(HOUR, order_time) / 2) * 2 + 2 AS end_time,
-    COUNT(*) AS total_orders
-FROM orders
-GROUP BY FLOOR(DATEPART(HOUR, order_time) / 2) * 2,
-         FLOOR(DATEPART(HOUR, order_time) / 2) * 2 + 2
-ORDER BY total_orders DESC
-;
-```
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/1.jpg)
+
 ### 2. Order Value Analysis (AOV of customer with more than 750 orders)
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/2.jpg)
 
 ### 3. Orders Without Delivery(Return each restuarant name, city and number of not delivered orders)
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/3.jpg)
 
 ### 4. Top 3 restaurants in each city by their total revenue, including their name and total revenue.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/4.jpg)
 
 ### 5. Most popular Dish in each city.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/5.jpg)
 
 ### 6. Customers who haven’t placed an order in 2024 but did in 2023.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/6.jpg)
 
 ### 7. Calculate and compare the order cancellation rate for each restaurant between the current year and the previous year.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/7.jpg)
 
 ### 8. Monthly Restaurant Growth Ratio based on the total number of delivered orders since its joining and comparing monthly sales trend. 
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/8.jpg)
 
 ### 9. Segment customers into 'Gold' or 'Silver' groups based on their total spending(comparing AOV) and find total revenue and total orders in each segment.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/9.jpg)
 
 ### 10. Rider's monthly earnings, assuming they earn 8% of the order amount
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/10.jpg)
 
 ### 11. Based on delivery time give 5-star (if <15 mins), 4-star (if 15-20 mins),and 3-star (if >20 mins) ratings and count number of every stars for each rider.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/11.jpg)
 
 ### 12.  Order frequency per day of the week and identifiction of the peak day for each restaurant.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/12.jpg)
 
 ### 13. Rider efficiency evaluation by determining average delivery times and identifying those with the lowest and highest averages.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/13a.jpg)
+
+
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/13b.jpg)
 
 ### 14. Tracking the popularity of specific order items over time and identify seasonal demand spikes.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/14.jpg)
 
 ### 15. The rank of each city based on the total revenue for last year.
 
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/15.jpg)
 
 
 
