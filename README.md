@@ -86,21 +86,25 @@ WHERE order_item IS NULL
 ### 1. Popular Time Slots during which the most orders are placed (based on 2-hour intervals)
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/1.jpg)
+
 The data highlights the peak ordering hours between 14:00 and 16:00, with 1,188 orders, followed by 18:00 and 20:00 (1,136 orders) and 22:00 and 24:00 (1,123 orders). These time slots indicate high customer engagement during **late afternoons and evenings**, suggesting opportunities to optimize staffing, launch targeted promotions, and boost revenue during these high-demand slots.
 
 ### 2. Order Value Analysis (AOV of customer with more than 750 orders)
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/2.jpg)
+
 The data reveals **Sneha Desai** as the top customer with **807** orders and a strong **₹333.58 AOV**. Targeting high-value customers like her with **exclusive offers** can boost **loyalty** and **repeat sales**.
 
 ### 3. Orders Without Delivery(Return each restuarant name, city and number of not delivered orders)
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/3.jpg)
+
 The data highlights **Mumbai** as the city with the highest undelivered orders, led by Gajalee (32 orders) and Mahesh Lunch Home (31 orders). This signals potential **operational bottlenecks** in Mumbai's delivery network. **Targeted process improvements** at top-affected restaurants could significantly **reduce non-deliveries** and enhance customer satisfaction.
 
 ### 4. Top 3 restaurants in each city by their total revenue, including their name and total revenue.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/4.jpg)
+
 The data reveals top-performing restaurants by city, with **Bademiya (Mumbai)** leading overall with **₹157,583** in revenue. **Mumbai** dominates the revenue charts, followed by strong performers like **The Oberoi (Bengaluru)** and **Annalakshmi (Chennai)**. Focusing promotional efforts on these **high-revenue hotspots** and replicating their strategies in lower-performing cities could drive **revenue growth** across regions.
 
 ### 5. Most popular Dish in each city.
