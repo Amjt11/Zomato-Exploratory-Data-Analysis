@@ -143,13 +143,13 @@ While **Gold customers** placed fewer orders (**4,548**) than **Silver** (**5,45
 
 The **Rider Monthly Earnings** show peak income of **₹2,083.44** in **July 2023**, directly tied to order revenue. To boost earnings, implement **incentives during high-demand months** and strategies to **optimize off-peak performance**.
 
-### 11. Based on delivery time give 5-star (if <15 mins), 4-star (if 15-20 mins),and 3-star (if >20 mins) ratings and count number of every stars for each rider.
+### 11. Based on delivery time give 5-star (if <15 mins), 4-star (if 15-20 mins),and 3-star (if >20 mins) ratings and count the number of every star for each rider.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/11.jpg)
 
 **Rider Ratings Analysis** reveals a dominance of **3-star ratings**, highlighting many **delayed deliveries**. While Riders **9 and 14** lead with the most **5-star ratings (40 each)**, the overall slow delivery trend risks **customer dissatisfaction**. **Actionable steps** like **route optimization** and **performance incentives** are crucial to boost efficiency and ratings.
 
-### 12.  Order frequency per day of the week and identifiction of the peak day for each restaurant.
+### 12.  Order frequency per day of the week and identification of the peak day for each restaurant.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/12.jpg)
 
@@ -172,7 +172,7 @@ The **Peak Day Analysis** highlights crucial demand spikes that can’t be ignor
 
 Focus on **promoting top seasonal dishes**, **removing or reworking low-performers**, and launching **targeted offers** during peak seasons to boost sales and optimize inventory.
 
-### 15. The rank of each city based on the total revenue for last year.
+### 15. The rank of each city is based on the total revenue for last year.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/15.jpg)
 
@@ -180,7 +180,14 @@ Focus on **promoting top seasonal dishes**, **removing or reworking low-performe
 
 To bridge the revenue gap, implement **localized marketing strategies** in lower-ranked cities, introduce **city-specific promotions**, and analyze **consumer preferences** to tailor offerings effectively.
 
+---
 
+## Conclusion
+
+This project highlights my ability to handle complex SQL queries and provides solutions to real-world business problems in a context of a food delivery service like zomato is taken here.
+This demonstrates a structured problem-solving methodology , data manipulation skills, and ability to derive actionable insights from raw data.
+
+---
 
 
 
