@@ -141,17 +141,25 @@ While **Gold customers** placed fewer orders (**4,548**) than **Silver** (**5,45
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/10.jpg)
 
+The **Rider Monthly Earnings** show peak income of **₹2,083.44** in **July 2023**, directly tied to order revenue. To boost earnings, implement **incentives during high-demand months** and strategies to **optimize off-peak performance**.
+
 ### 11. Based on delivery time give 5-star (if <15 mins), 4-star (if 15-20 mins),and 3-star (if >20 mins) ratings and count number of every stars for each rider.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/11.jpg)
+
+**Rider Ratings Analysis** reveals a dominance of **3-star ratings**, highlighting many **delayed deliveries**. While Riders **9 and 14** lead with the most **5-star ratings (40 each)**, the overall slow delivery trend risks **customer dissatisfaction**. **Actionable steps** like **route optimization** and **performance incentives** are crucial to boost efficiency and ratings.
 
 ### 12.  Order frequency per day of the week and identifiction of the peak day for each restaurant.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/12.jpg)
 
+The **Peak Day Analysis** highlights crucial demand spikes that can’t be ignored. **Britannia & Co.** sees **85 orders** on Saturdays, while **Ziya** and **Indigo** hit **79 orders** on Sundays. Even midweek, **Bademiya** peaks with **82 orders** on Wednesdays. Ignoring these trends risks **understaffing**, **inventory gaps**, and **lost revenue**—turning small oversights into big setbacks.
+
 ### 13. Rider efficiency evaluation by determining average delivery times and identifying those with the lowest and highest averages.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/13a.jpg)
+
+**Rider Efficiency Analysis** reveals gaps in performance. While riders like **#7** and **#8** average swift **32-minute** deliveries, others like **#1** and **#2** lag with **51-minute** averages—**60% slower**. These inefficiencies can escalate **customer dissatisfaction**, impact **order turnover**, and create hidden revenue leaks. Optimizing rider allocation and routes is essential to close this performance gap and boost overall delivery efficiency.
 
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/13b.jpg)
@@ -160,10 +168,17 @@ While **Gold customers** placed fewer orders (**4,548**) than **Silver** (**5,45
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/14.jpg)
 
+**Pasta Alfredo** and **Masala Dosa** dominate in **summer** and **winter**, while **Chicken Biryani** stays consistently popular year-round. Items like **Pizza**, **Chicken Tikka**, and **Samosa** underperform across all seasons.
+
+Focus on **promoting top seasonal dishes**, **removing or reworking low-performers**, and launching **targeted offers** during peak seasons to boost sales and optimize inventory.
+
 ### 15. The rank of each city based on the total revenue for last year.
 
 ![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/15.jpg)
 
+**Mumbai** leads with the highest revenue (**1,522,121**), followed by **Bengaluru** (**719,642**) and **Delhi** (**395,417**). **Hyderabad** and **Chennai** trail behind with lower revenues.
+
+To bridge the revenue gap, implement **localized marketing strategies** in lower-ranked cities, introduce **city-specific promotions**, and analyze **consumer preferences** to tailor offerings effectively.
 
 
 
