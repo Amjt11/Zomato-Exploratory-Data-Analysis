@@ -133,7 +133,7 @@ The **monthly restaurant growth analysis** for **2023** reveals fluctuating tren
 
 ### 9. Segment customers into 'Gold' or 'Silver' groups based on their total spending(comparing AOV) and find total revenue and total orders in each segment.
 
-![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/9.jpg](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/9a.jpg)
+![](https://github.com/Amjt11/Zomato-Exploratory-Data-Analysis/blob/main/Output%20screenshots/9a.jpg)
 
 While **Gold customers** placed fewer orders (**4,548**) than **Silver** (**5,452**), they contributed significantly with **₹1,519,551** in revenue, showcasing their **high-value spending**. This insight suggests prioritizing **loyalty programs** and **exclusive offers** for **Gold customers**, while exploring **upselling strategies** to boost **Silver** customer value.
 
