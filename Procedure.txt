@@ -1,0 +1,104 @@
+     Zomato EDA
+
+Q 1. Popular Time Slots
+A: Using Datepart func to extract Hour from Order_Time, dividing by 2 and taking the floor value of it AS Start_time
+   and same process + 2 As End_Time, then Group By both Times, Order by Desc.
+
+
+Q 2. Order Value Analysis (AOV of customer with more than 750 orders)
+A: Join the orders table with the customers table on customer_id, Group By customer_name and  Having By count number 
+   of orders > 750 and Average Order Value = AVG(o.total_amount).
+
+
+Q 3. Orders Without Delivery(Return each restuarant name, city and number of not delivered orders)
+A: Extract the names and cities of restaurants with orders that have a delivery status of 'Not Delivered', 
+   counting the number of such orders , Group By name and city , Order By count of order_id
+
+
+Q 4. Top 3 restaurants in each city by their total revenue, including their name and total revenue
+A: Using the With clause we create a Rank table where we Select restaurant name, city, total revenue and create 
+   Dense Rank Over Partition by city and Order by total revenue, then join restaurant and orders table
+   Where order date > DATEADD(YEAR, -1, GETDATE()) means 1 year interval from current date, Group By name and city
+   Finally we select from Rank Table where Rank is 1 and Order By total revenue in decreasing order.
+
+
+Q 5. Most popular Dish in each city
+A: Using a Sub Query we join orders and restaurant table, select restaurant city, order item and count number of
+   orders for each item, then create rank column using Dense Rank Over Partition by city and Order by total count.
+    Outer Query filters out most ordered item in each city (rank = 1) and sorts in descending order.
+
+
+Q 6. Customers who haven’t placed an order in 2024 but did in 2023.
+A: Select distinct customers from orders table where year extracted from order date is 2023 And Not In
+   a Sub Query where we select distinct customers with year of their order date is 2024.
+
+
+Q 7. Calculate and compare the order cancellation rate for each restaurant between the current year and 
+     the previous year.
+A: The query computes the cancellation rate for each restaurant in 2023 and 2024:
+Counting total orders and not delivered orders for each restaurant in both years.
+Dividing not fulfilled orders by total orders, multiplying by 100, and rounding to 2 decimal places.
+Joining the results from 2023 and 2024 on restaurant_id 
+Sorting the output by restaurant_id, displaying each restaurant's cancellation rate for both years.
+Coalesce ensures missing values replaced with Zeroes
+
+
+Q 8.  Monthly Restaurant Growth Ratio based on the total number of delivered orders since its joining and 
+      comparing monthly sales trend 
+A: convert date into 'mm-yy' so that we can perform group by on orders along with restaurant id too.
+   Count order_id as total orders. Join deleveries table to apply Where clause on delivery status is 'delivered'.
+   monthly growth ratio = (current month orders - last month orders)/last month order  * 100
+   LAG function to get the previous month’s count,Over Partition by restaurant_id.
+
+
+Q 9. Segment customers into 'Gold' or 'Silver' groups based on their total spending(comparing average order value)
+     and find total revenue and total orders in each segment.
+A: For each customer we calculate sum of total amount as total spent using Group by; Then using Case clause,
+   if total spent > a sub query of Average of total amount then Gold otherwise silver category.
+   This will come as a sub query from which we will do Group by category and find total orders and revenue for each category.
+
+
+Q 10. Rider's monthly earnings, assuming they earn 8% of the order amount
+A: Format order date as mm_yy , group by rider id and month , calculate 8% of sum of total amounts of orders.
+
+
+Q 11. Based on delivery time give 5-star (if <15 mins), 4-star (if 15-20 mins),and 3-star (if >20 mins) ratings and count number of
+  every stars for each rider.
+A: Join orders and deliveries table where delivery status is delivered;  It handles cases where deliveries cross midnight
+   by splitting the time difference into two parts—before and after midnight—and summing them, ensuring accurate duration.
+   Using this as a sub query, extract rider-ratings using SWITCH CASE. This will be as a sub query of another superior query
+   where we count total stars for every star of each rider using Group by.
+
+
+Q 12.  Order frequency per day of the week and identifiction of the peak day for each restaurant.
+A: Join restaurant and orders table; Extract day from order date using Format, count total orders, rank over partition by
+   restaurant name and order by total orders to find which day of week has most orders; and Group By name and orders count; 
+   Use this as a subquery and select restaurant where rank = 1 .
+
+
+Q 13. Rider efficiency evaluation by determining average delivery times and identifying those with the lowest and highest averages.
+A: Firstly, the Inner subquery computes the delivery time for each order using DATEDIFF, handling cross-midnight deliveries by adding 
+   the time from order_time to 23:59:59 and from 00:00:00 to delivery_time + 1 minute. The next subquery then averages 
+   delivery times per rider. Finally, it selects the minimum and maximum of these averages from sub query.
+ 
+   
+Q 14. Tracking the popularity of specific order items over time and identify seasonal demand spikes.
+A: Using Case statement to create 5 seasons spring,summer,monsoon,autumn and winter, we count number of items sold in every season 
+   for each item.
+
+
+Q 15. The rank of each city based on the total revenue for last year.
+A: Join orders and restaurants table; aggregate total_amount by city and ranks cities using RANK() based on descending total revenue.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+    
